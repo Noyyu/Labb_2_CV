@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+* {
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+html {
+  font-size: 32px;
+}
+body {
+  background-color: rgb(45, 43, 60);
+  font-family: "VT323", monospace;
+  letter-spacing: 1px;
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  font-size: 2.5rem;
+}
+
+h3 {
+  margin-top: 1rem;
+}
+
+nav {
+  position: relative;
+  height: 3rem;
+  background-color: rgb(255, 106, 150);
+  border-radius: 0.3rem 0.3rem 0rem 0rem;
+  border-width: 0.1rem 0.1rem 0rem 0.1rem;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  margin: 1rem 1rem 0rem 1rem;
+}
+/* Listan för menu objekten */
+nav ul {
+  position: absolute;
+  bottom: 0;
+  width: 97%;
+  padding-left: 0.5rem;
+  display: flex;
+  list-style-type: none;
+  gap: 0.2rem;
+}
+/*Listans ordning*/
+nav ul li {
+  margin-top: auto;
+  white-space: nowrap; /* Gör att "about me" inte wrappar */
+  order: 3; /* Alla sidor i listan hamnar på plats 3 */
+}
+nav ul li:has(a.active) {
+  order: 2; /* Den aktiva sidan hamnar på plats 2 */
+}
+nav ul li:has(img.icon_arrow) {
+  order: 1; /* Mina arrows hamnar på plats 1 */
+}
+nav ul li:has(img#minimize) {
+  margin-left: auto;
+}
+
+/* Länkarna i menu objektet */
+nav a {
+  font-size: clamp(10px, 2.4vw, 32px);
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 0.2rem;
+  display: flex;
+  background-color: rgb(255, 220, 95);
+  border-radius: 0.3rem 0.3rem 0rem 0rem;
+  border-width: 0.1rem 0.1rem 0rem 0.1rem;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  transform-origin: bottom;
+}
+/* Länken som är aktiv */
+nav a.active {
+   font-size: clamp(10px, 4vw, 40px);
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 153, 109);
+  padding: 0.154rem 3rem;
+  margin-left: 0.8rem;
+}
+nav a:hover {
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  transform: scaleY(1.1);
+  transition: 0.1s;
+}
+
+/*Arrow objekt till vänster*/
+nav img.icon_arrow {
+  width: 0.8rem;
+  height: 0.8rem;
+  padding: 0.1rem;
+}
+nav img#rightArrow {
+  transform: rotate(180deg);
+}
+/*Iconerna till höger*/
+nav img.icon_nav {
+  margin-left: auto;
+  align-self: center;
+  width: 0.9rem;
+  height: 0.9rem;
+  background-color: rgb(105, 238, 255);
+  padding: 0.1rem;
+  border-color: black;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-radius: 3px;
+}
+nav img#exit {
+  padding: 0.15rem;
+  scale: 90%;
+}
+
+/* Search bar område*/
+.search-container {
+  margin: 0rem 1rem 0rem 1rem;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  background-color: rgb(255, 153, 109);
+}
+.search-container input::placeholder {
+  color: rgb(0, 0, 0);
+  font-family: "VT323", monospace;
+  font-size: 200%;
+  padding-left: 1.5rem;
+}
+.search-container .search-input {
+  width: 80%;
+  height: 1.2rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 200px;
+  border-color: rgb(0, 0, 0);
+  border-width: 0.1rem;
+  border-style: solid;
+  margin-left: 3rem;
+  padding-top: 0.2rem;
+  align-items: center;
+}
+.search-container .search_icon {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  padding-top: 0.25rem;
+  padding-left: 3.4rem;
+}
+.search-container .home_icon {
+  position: absolute;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-left: 0.5rem;
+  align-self: center;
+}
+/* Dom 3 fyrkanterna */
+ul.window-content {
+  margin: 1rem 1rem 1rem 1rem;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  gap: 0.3rem;
+  text-decoration: none;
+}
+
+ul.window-content p:hover {
+  transform-origin: top;
+  color: rgb(255, 255, 255);
+  transform: scaleY(1.1);
+  transition: 0.1s;
+}
+
+ul.window-content h4 {
+  box-shadow: inset -3px 0 0 0 rgba(0, 0, 0, 0.7);
+  background-color: rgb(105, 238, 255);
+  border: 0.1rem solid rgb(0, 0, 0);
+  border-bottom: 0rem;
+  border-radius: 10px 10px 0px 0px;
+  padding: 0.5rem 0rem 0.5rem 0.5rem;
+  margin-top:1rem;
+}
+ul.window-content p {
+  display:flex;
+  font-family: "VT323", monospace;
+  box-shadow: inset -3px -5px 0 0 rgba(0, 0, 0, 0.7);
+  padding: 0.5rem;
+  display: flex;
+  background-color: rgb(255, 106, 150);
+  border: 0.1rem solid rgb(0, 0, 0);
+  border-radius: 0px 0px 10px 10px;
+  padding-bottom: 2rem;
+}
+
+ul.window-content ul {
+  padding: 0.5rem;
+  list-style: none;
+  background-color: rgb(255, 106, 150);
+  border: 0.1rem solid rgb(0, 0, 0);
+  border-radius: 0px 0px 10px 10px;
+  padding-bottom: 2rem;
+  box-shadow: inset -3px -5px 0 0 rgba(0, 0, 0, 0.7);
+}
+
+/* pop-upp rutan vid portfolio */
+.modal {
+    display: none;
+    position: fixed; /* Gör att den flyter ovanpå allt */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Mörk genomskinlig bakgrund. */
+    z-index: 9999; /* Lägger den längst fram */
+}
+/*När man klickat på modal länken */
+.modal:target {
+    display:flex; /* Ändras från none till flex så att man kan se den */
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background: white;
+    margin: 20%;
+    padding: 1rem;
+    border: 3px solid black;
+    border-radius: 0.3rem;
+    color: black;
+}
+ul.window-content .modal-content p:hover /*Jag vill inte att den ska ha en transaktion här*/
+{
+  transform-origin: top;
+  color: rgb(0, 0, 0);
+  transform: scaleY(1);
+  transition: 0.1s;
+}
+
+/* Namn området */
+div.name-display {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  margin: 0rem 1rem 0rem 1rem;
+  background-color: rgb(208, 255, 115);
+  border: 0.1rem solid rgb(0, 0, 0);
+  border-top: 0rem;
+}
+
+div.content {
+  margin: 0rem 1rem 0rem 1rem;
+  padding-right: auto;
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  background-color: rgb(255, 228, 184);
+  border: 0.1rem solid rgb(0, 0, 0);
+  border-top: 0rem;
+}
+
+footer {
+  margin: 0rem 1rem 0rem 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  text-align: center;
+  background-color: rgb(255, 220, 95);
+  border: 0.1rem solid rgb(0, 0, 0);
+  border-top: 0rem;
+}
+
+/*CV grejer*/
+.cv-container {
+  margin: 2rem;
+  padding: 2rem;
+  background: white;
+  border: 0.1rem solid black;
+  border-radius: 5px;
+  box-shadow: inset -4px -7px 0 0 rgba(0, 0, 0, 0.7);
+}
+.cv-header {
+  border-bottom: 0.2rem solid black;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+.cv-grid {
+  display: flex;
+  flex-wrap: wrap; /* Gör att dom lägger sig fint vid olika fönsterstorlekar*/
+  gap: 2rem;
+}
+.cv-sidebar {
+  flex: 1; /* Tar upp mindre plats */
+  min-width: 150px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+}
+.cv-sidebar ul {
+  padding-left: 1rem;
+}
+.date {
+  font-style: italic;
+  color: #666;
+  white-space: nowrap; /* Håller ihop årtalen på en rad */
+}
+
+@media (max-width: 1000px) {
+  nav img.icon_nav {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 4vw;
+  }
+  .search-container input::placeholder {
+    font-size: 3vw;
+  }
+  .search-container .search-input {
+    height: 1.5rem;
+    padding-top: 0%;
+  }
+  .search-container .search_icon {
+    width: 1rem;
+    height: 1rem;
+    padding-top: 0.4rem;
+    padding-left: 3.4rem;
+  }
+  nav ul {
+    position: absolute;
+    bottom: 0;
+    width: 97%;
+    padding-left: 0.5rem;
+    display: flex;
+    list-style-type: none;
+    gap: 0.2rem;
+  }
+  nav ul li a {
+    font-size: 4vw;
+  }
+  nav ul li a.active {
+    font-size: 5vw;
+    margin-left: 0rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  nav img.icon_arrow {
+    display: none;
+  }
+  nav img.icon_nav {
+    display: none;
+  }
+  ul.window-content {
+    font-size: 4vw;
+    flex-direction: column;
+    margin: 0.5rem;
+    gap: 1rem;
+  }
+}
