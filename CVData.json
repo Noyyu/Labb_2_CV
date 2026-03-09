@@ -1,0 +1,53 @@
+{
+  "erfarenheter": [
+    {
+      "period": "2018-2019 - 2025-2026",
+      "roll": "Automation engineer",
+      "företag": "Akwel",
+      "beskrivning": "Robot automation production for car parts."
+    },
+    {
+      "period": "2022 - 2025",
+      "roll": "Gamedeveloper",
+      "företag": "Ringtail Interactive",
+      "beskrivning": "Game development, scripting and creating 3D and VFX assets."
+    },
+    {
+      "period": "2015 - Now",
+      "roll": "3D and 2D assets",
+      "företag": "Freelance",
+      "beskrivning": "Creation of assets for individuals and companies."
+    }
+  ],
+
+  "utbildning": [
+    {
+      "period": "2019 - 2022",
+      "examen": "Technical artist for digital games.",
+      "skola": "Blekinges Tekniska Högskola"
+    },
+    {
+      "period": "2025 - Now",
+      "examen": "Systemdeveloper",
+      "skola": "Campus Varberg"
+    },
+    {
+      "period": "2022 jan - 2022 - mar",
+      "examen": "Painting and Architecture culture 1600-1900",
+      "skola": "Linnéuniversitetet"
+    }
+  ],
+
+  "skills": [
+    { "namn": "HTML & CSS" },
+    { "namn": "C#, C++, Python" },
+    {"namn": "Photoshop"},
+    {"namn": "Blender"},
+    {"namn": "Maya"},
+    {"namn": "Z-Brush"},
+    {"namn": "Substance Painter"},
+    {"namn": "Substance Designer"},
+    { "namn": "DaVinci Resolve" },
+    { "namn": "Unity, Unreal 4/5" }
+  ]
+}

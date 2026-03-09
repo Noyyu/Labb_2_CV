@@ -1,19 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <link rel="stylesheet" href="style.css" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+
+    <div class="modal" id="secret-gif-modal">
+      <div class="modal-content">
+        <img id="modal-gif-image" src="" alt="Secret GIF" />
+      </div>
+    </div>
+
     <nav class="menu">
       <ul>
-        <li><a href="index.html" >HOME</a></li>
-        <li><a href="CV.html" >CV</a></li>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="CV.html">CV</a></li>
         <li><a href="OmMig.html">ABOUT ME</a></li>
         <li><a href="Portfolio.html">PORTFOLIO</a></li>
-        <li><a href="referenser.html"class="active">REFERENCES</a></li>
+        <li><a href="referenser.html" class="active">REFERENCES</a></li>
         <li>
           <img
             src="   https://cdn-icons-png.flaticon.com/512/507/507257.png "
@@ -68,32 +76,35 @@
       <input type="text" placeholder="Search..." class="search-input" />
     </div>
 
+    <div id="secret-area"></div>
+    
     <div class="content">
-        <ul class="window-content">
+      <ul class="window-content">
         <li>
-            <h4>/* Person one */</h4>
-            <ul>
-              <li><b>Phone Number:</b> 12412412412 </li>
-              <li><b>Email:</b> hehe@hehe.hehe</li>
-              <li><b>Profession:</b> This person does stuff</li>
-            </ul>
-            
-            <h4>/* Person two */</h4>
-            <ul>
-              <li><b>Phone Number:</b> 12412412412 </li>
-              <li><b>Email:</b> hehe@hehe.hehe</li>
-              <li><b>Profession:</b> This person does stuff</li>
-            </ul>
+          <h4>/* Person one */</h4>
+          <ul>
+            <li><b>Phone Number:</b> 12412412412</li>
+            <li><b>Email:</b> hehe@hehe.hehe</li>
+            <li><b>Profession:</b> This person does stuff</li>
+          </ul>
 
-            <h4>/* Person three */</h4>
-            <ul>
-              <li><b>Phone Number:</b> 12412412412 </li>
-              <li><b>Email:</b> hehe@hehe.hehe</li>
-              <li><b>Profession:</b> This person does stuff</li>
-            </ul>
+          <h4>/* Person two */</h4>
+          <ul>
+            <li><b>Phone Number:</b> 12412412412</li>
+            <li><b>Email:</b> hehe@hehe.hehe</li>
+            <li><b>Profession:</b> This person does stuff</li>
+          </ul>
+
+          <h4>/* Person three */</h4>
+          <ul>
+            <li><b>Phone Number:</b> 12412412412</li>
+            <li><b>Email:</b> hehe@hehe.hehe</li>
+            <li><b>Profession:</b> This person does stuff</li>
+          </ul>
+        </li>
       </ul>
     </div>
-</body>
+  </body>
   <footer>
     <p>Copyright © 2024 Nikki Norberg. All rights reserved.</p>
   </footer>

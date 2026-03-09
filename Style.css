@@ -12,7 +12,9 @@ body {
   font-family: "VT323", monospace;
   letter-spacing: 1px;
 }
-
+body.is-loading {
+    cursor: wait !important;
+}
 h1 {
   color: rgb(0, 0, 0);
   font-size: 2.5rem;
@@ -74,7 +76,7 @@ nav a {
 }
 /* Länken som är aktiv */
 nav a.active {
-   font-size: clamp(10px, 4vw, 40px);
+  font-size: clamp(10px, 4vw, 40px);
   color: rgb(0, 0, 0);
   background-color: rgb(255, 153, 109);
   padding: 0.154rem 3rem;
@@ -179,10 +181,10 @@ ul.window-content h4 {
   border-bottom: 0rem;
   border-radius: 10px 10px 0px 0px;
   padding: 0.5rem 0rem 0.5rem 0.5rem;
-  margin-top:1rem;
+  margin-top: 1rem;
 }
-ul.window-content p {
-  display:flex;
+ul.window-content p{
+  display: flex;
   font-family: "VT323", monospace;
   box-shadow: inset -3px -5px 0 0 rgba(0, 0, 0, 0.7);
   padding: 0.5rem;
@@ -205,31 +207,36 @@ ul.window-content ul {
 
 /* pop-upp rutan vid portfolio */
 .modal {
-    display: none;
-    position: fixed; /* Gör att den flyter ovanpå allt */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Mörk genomskinlig bakgrund. */
-    z-index: 9999; /* Lägger den längst fram */
+  display: none;
+  position: fixed; /* Gör att den flyter ovanpå allt */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Mörk genomskinlig bakgrund. */
+  z-index: 9999; /* Lägger den längst fram */
 }
 /*När man klickat på modal länken */
 .modal:target {
-    display:flex; /* Ändras från none till flex så att man kan se den */
-    justify-content: center;
-    align-items: center;
+  display: flex; /* Ändras från none till flex så att man kan se den */
+  justify-content: center;
+  align-items: center;
 }
 .modal-content {
-    background: white;
-    margin: 20%;
-    padding: 1rem;
-    border: 3px solid black;
-    border-radius: 0.3rem;
-    color: black;
+  background: white;
+  margin: auto;
+  padding: 1rem;
+  border: 0.1rem solid black;
+  border-radius: 0.3rem;
+  color: black;
 }
-ul.window-content .modal-content p:hover /*Jag vill inte att den ska ha en transaktion här*/
-{
+#secret-gif-modal .modal-content {
+  background: rgba(255, 255, 255, 0);
+  margin: auto;
+  border: 0px;
+}
+
+ul.window-content .modal-content p:hover /*Jag vill inte att den ska ha en transaktion här*/ {
   transform-origin: top;
   color: rgb(0, 0, 0);
   transform: scaleY(1);
@@ -252,6 +259,7 @@ div.content {
   background-color: rgb(255, 228, 184);
   border: 0.1rem solid rgb(0, 0, 0);
   border-top: 0rem;
+  border-bottom: 0rem;
 }
 
 footer {
@@ -260,17 +268,48 @@ footer {
   text-align: center;
   background-color: rgb(255, 220, 95);
   border: 0.1rem solid rgb(0, 0, 0);
-  border-top: 0rem;
 }
 
 /*CV grejer*/
 .cv-container {
-  margin: 2rem;
+  margin: 1rem;
   padding: 2rem;
   background: white;
   border: 0.1rem solid black;
   border-radius: 5px;
   box-shadow: inset -4px -7px 0 0 rgba(0, 0, 0, 0.7);
+}
+.cv-container h3 {
+  font-weight: 1000;
+  padding: 0.3rem 1rem 0.3rem 1rem;
+  margin: 0px;
+}
+.cv-container ul {
+  padding: 0rem 1rem 0rem 1rem;
+  gap: 1rem;
+}
+.cv-container section {
+  flex: 2;
+}
+.cv-container aside {
+  flex: 1;
+}
+
+.cv-container li {
+  margin-bottom: 0.5rem;
+}
+
+.date {
+  white-space: nowrap;
+  color: rgb(139, 139, 139);
+}
+.cv-container ul li p {
+  padding: 0px;
+  margin: 0px;
+  background-color: rgba(240, 248, 255, 0);
+  border-width: 0px;
+  border-radius: 0px;
+  box-shadow: none;
 }
 .cv-header {
   border-bottom: 0.2rem solid black;
@@ -279,25 +318,27 @@ footer {
 }
 .cv-grid {
   display: flex;
+  flex-direction: row;
+  align-items: flex-start;
   flex-wrap: wrap; /* Gör att dom lägger sig fint vid olika fönsterstorlekar*/
-  gap: 2rem;
+  gap: 0rem;
 }
 .cv-sidebar {
   flex: 1; /* Tar upp mindre plats */
-  min-width: 150px;
   background: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  padding: 15px;
-}
-.cv-sidebar ul {
-  padding-left: 1rem;
-}
-.date {
-  font-style: italic;
-  color: #666;
-  white-space: nowrap; /* Håller ihop årtalen på en rad */
+  padding-bottom: 1rem;
 }
 
+#secret-area {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer; /* Gör att muspekaren ser ut som en hand */
+  background: transparent; /* Gör den osynlig */
+}
 @media (max-width: 1000px) {
   nav img.icon_nav {
     display: none;

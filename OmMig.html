@@ -2,11 +2,19 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="style.css" />
+    <script src="scripts.js" defer></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <body>
+
+    <div class="modal" id="secret-gif-modal">
+      <div class="modal-content">
+        <img id="modal-gif-image" src="" alt="Secret GIF" />
+      </div>
+    </div>
+
     <nav class="menu">
       <ul>
         <li><a href="index.html">HOME</a></li>
@@ -68,6 +76,8 @@
       <input type="text" placeholder="Search..." class="search-input" />
     </div>
 
+    <div id="secret-area"></div>
+    
     <div class="content">
       <ul class="window-content">
         <li>

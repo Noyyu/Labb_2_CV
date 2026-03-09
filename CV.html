@@ -2,11 +2,19 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="style.css" />
+    <script src="scripts.js" defer></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <body>
+
+    <div class="modal" id="secret-gif-modal">
+      <div class="modal-content">
+        <img id="modal-gif-image" src="" alt="Secret GIF" />
+      </div>
+    </div>
+
     <nav class="menu">
       <ul>
         <li><a href="index.html">HOME</a></li>
@@ -66,74 +74,28 @@
         class="home_icon"
       />
       <input type="text" placeholder="Search..." class="search-input" />
-    </div>
 
-    <div class="content">
+      <div id = "secret-area"></div> 
+
       <div class="cv-container">
-        <header class="cv-header">
-          <h1>NIKKI NORBERG</h1>
-          <p>Junior Webbutvecklare | Technical artist | 3D Artist.</p>
-        </header>
-        <main class="cv-grid">
-          <section class="cv-section">
-            <h2>Experiences</h2>
-            <div class="cv-item">
-              <h3>Akwel - Automation engineer</h3>
-              <span class="date">2018-2019 - 2025-2026</span>
-              <p>Robot automation production for car parts.</p>
-            </div>
+        <h1 class = "cv-header"> Nikki Norberg</h1>
+        <div class = "cv-grid">
+          <section>
+            <h2>/*Experiences*/</h2>
+            <ul id = "experience-list"></ul>
 
-            <div class="cv-item">
-              <h3>Ringtail - 3D artist, Technical artist</h3>
-              <span class="date">2022 - 2025</span>
-              <p>Game development, scripting and creating 3D and VFX assets.</p>
-            </div>
-
-              <div class="cv-item">
-              <h3>Freelancer - 3D and 2D assets</h3>
-              <span class="date">2015 - Now </span>
-              <p>Creation of assets for individuals and companies.</p>
-            </div>
+            <h2>/*Education*/</h2>
+            <ul id = "education-list"></ul>
           </section>
 
-          <section class="cv-section">
-            <h2>Education</h2>
-            <div class="cv-item">
-              <h3>Blekinges tekniksa högskola</h3>
-              <span class="date">2019 - 2022</span>
-              <p>Technical artist for digital games.</p>
-              <p>Bachelors in science.</p>
-            </div>
-
-            <div class="cv-item">
-              <h3>Linnéuniversitetet</h3>
-              <span class="date">2022 jan - 2022 mar </span>
-              <p>Painting and Architecture culture 1600-1900</p>
-            </div>
-
-            <div class="cv-item">
-              <h3>Campus Varberg</h3>
-              <span class="date">2025 - now </span>
-              <p>Systemdevelopment</p>
-            </div>
-          </section>
-
-          <aside class="cv-sidebar">
-            <h2>Skills</h2>
-            <ul>
-              <li>HTML & CSS</li>
-              <li>C#, C++, Python</li>
-              <li>
-                Photoshop, Blender, Maya, Z-Brush, Substance Painter, Substance
-                Designer
-              </li>
-              <li>DaVinci Resolve</li>
-              <li>Unity, Unreal 4/5</li>
-            </ul>
-          </aside>
-        </main>
+            <aside>
+              <div class = "cv-sidebar">
+                <h3>/*Skills*/</h3>
+                <ul id = "skills-list"></ul>
+              </div>
+            </aside>
+          </div>
       </div>
-    </div>
   </body>
   <footer>
     <p>Copyright © 2024 Nikki Norberg. All rights reserved.</p>

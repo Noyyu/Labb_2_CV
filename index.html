@@ -2,11 +2,19 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="style.css" />
+    <script src="scripts.js" defer></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nikki Norberg</title>
   </head>
   <body>
+
+    <div class="modal" id="secret-gif-modal">
+      <div class="modal-content">
+        <img id="modal-gif-image" src="" alt="Secret GIF" />
+      </div>
+    </div>
+
     <nav class="menu">
       <ul>
         <li><a href="index.html" class="active">HOME</a></li>
@@ -33,7 +41,6 @@
         <li>
           <img
             src="   https://cdn-icons-png.flaticon.com/512/1828/1828901.png "
-            
             alt="Icon"
             class="icon_nav"
             id="minimize"
@@ -58,6 +65,8 @@
       </ul>
     </nav>
 
+    <div id="secret-area"></div>
+    
     <div class="search-container">
       <img
         src="   https://cdn-icons-png.flaticon.com/512/622/622669.png "
@@ -79,7 +88,7 @@
     <div class="content">
       <ul class="window-content">
         <li>
-            <h4>/* A little bit about me */</h4>
+          <h4>/* A little bit about me */</h4>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Repellendus doloremque ullam dolor aliquid officia, assumenda
@@ -88,7 +97,7 @@
           </p>
         </li>
         <li>
-            <h4>/* My experience */</h4>
+          <h4>/* My experience */</h4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum
             ipsum error maxime quo. Facere doloribus quia necessitatibus
@@ -97,7 +106,7 @@
           </p>
         </li>
         <li>
-          <h4> /*My education */ </h4>
+          <h4>/*My education */</h4>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
             expedita quae repudiandae laboriosam! Hic earum ut, nobis sit et
